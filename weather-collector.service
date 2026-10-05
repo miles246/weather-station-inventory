@@ -1,0 +1,15 @@
+[Unit]
+Description=All-sky weather station collector (sensors -> InfluxDB)
+After=network-online.target influxdb.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=morp
+WorkingDirectory=/home/morp/w2-pi
+ExecStart=/home/morp/w2-pi/venv/bin/python /home/morp/w2-pi/weather_collector.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+# Pi sensor + InfluxDB collector dependencies
+adafruit-blinka
+adafruit-circuitpython-bme280
+adafruit-circuitpython-mlx90614
+adafruit-circuitpython-tsl2591
+adafruit-circuitpython-ltr390   # UV sensor, added later - harmless to install now
+adafruit-circuitpython-ens160   # air-quality test sensor (SparkFun combo)
+influxdb-client
